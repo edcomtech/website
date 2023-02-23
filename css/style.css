@@ -1,0 +1,579 @@
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-ThinItalic-webfont.eot');
+    src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-ThinItalic-webfont.woff') format('woff'),
+         url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
+         url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg');
+    font-weight: 200;
+}
+
+body {
+	background-color: #12100e;
+	background-image: url('pix/tron.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 1920px 1080px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.page {
+	position: relative;
+	border-radius: 10px;
+	min-height: calc(100vh - 30px);
+	margin: 15px;
+	background-color: rgba(60, 60, 60, 0.5);
+	font-family:'Roboto', sans-serif;
+	font-size: 100%;
+	box-shadow: 5px 5px 15px #000000;
+	display: flex;
+	flex-direction: column;
+}
+
+.tophead {
+	font-size: 150%;
+	font-family: Ubuntu, sans-serif;
+	color: #F9C80E;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 5px;
+	margin-top: 20px;
+	padding: 15px;
+	text-shadow: 5px 5px 5px #000000;
+}
+
+nav {
+	border: 2px solid #13477d;
+	border-radius: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+	background-color: #1e1c1a;
+	min-height: 50px;
+	display: flex;
+}
+
+.navbar-pages {
+	flex: 75%;
+	margin-left: 5px;
+}
+
+.navbar-pages a {
+	text-decoration: none;
+	color: whitesmoke;
+	display: inline-block;
+	padding: 15px 15px;
+	font-size: 15px;
+	border: 1px solid #1e1c1a;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+
+.mmenu {
+	color: #F9C80E;
+	background-color: #444040;
+	border-radius: 8px;
+	border: 2px solid #cc3300;
+	display: none;
+	padding: 15px 15px;
+	font-size: 15px;
+}
+
+#minput {
+	position: absolute;
+	left: -9999px;
+}
+
+.navbar-pages a.active {
+	border-color: #F9C80E;
+	border-width: 2px;
+	color: #F9C80E;
+}
+
+.navbar-pages a:hover {
+	border-color: #13477d;
+	border-width: 2px;
+	color: #13477d;
+}
+
+.navbar-icons {
+	flex: 25%;
+	text-align: right;
+	margin-right: 5px;
+}
+
+.navbar-icons a {
+	text-decoration: none;
+	float: right;
+	margin-top: 8px;
+	padding: 7px 15px;
+	border: 1px solid #1e1c1a;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+
+.navbar-icons a.active {
+	border-color: #F9C80E;
+	border-width: 2px;
+}
+
+.navbar-icons a:hover {
+	border-color: #13477d;
+	border-width: 2px;
+}
+
+.content {
+	border: 2px solid #13477d;
+	border-radius: 10px;
+	font-family:'Roboto', sans-serif;
+	margin-bottom: 40px;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-left: 25px;
+	flex: 100%;
+	background-color: #1e1c1a;
+}
+
+.contenthead {
+	font-size: 115%;
+	color: whitesmoke;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 15px;
+}
+
+.datenamehead {
+	font-size: 100%;
+	font-style: italic;
+	font-weight: normal;
+	color: whitesmoke;
+	border-radius: 10px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	padding: 10px;
+	text-align: center;
+}
+
+.contentsubhead {
+	font-size: 100%;
+}
+
+.content a:link {
+	color: #F9C80E;
+}
+
+.content a:visited {
+	color: #F9C80E;
+}
+
+.pageimage {
+	float: center;
+	padding: 10px;
+	color: #555555;
+    margin-left: auto;
+	margin-right: auto;
+	max-width: 85%;
+	height: auto;
+}
+
+.pageimage img {
+	display: block;
+	border-radius: 5%;
+    margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+table {
+	text-align: center;
+	padding: 15px 0px;
+	min-height: inherit;
+	table-layout: fixed;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+
+table img {
+	width: 100%;
+	height: 150px;
+}
+
+.caption {
+	font-style: italic;
+  font-size: smaller;
+	min-height: 50px;
+	margin-bottom: 5px;
+	text-align: center;
+	color: whitesmoke;
+}
+
+.normtext {
+	color: whitesmoke;
+	margin-right: 40px;
+	margin-left: 40px;
+	line-height: 1.5;
+}
+
+code {
+	background-color: #000000;
+	font-size: 115%;
+	color: #aaaaff;
+	padding: 3px;
+}
+
+.listhead {
+	color: 	#ff4365;
+	width: 50%;
+	font-size: 100%;
+}
+
+.listtext {
+	margin-left: 20%;
+}
+
+.console {
+	margin: 30px 50px;
+	border: 1px solid #666666;
+	border-radius: 10px;
+	background-color: #000000;
+}
+
+.consoletext {
+	margin: 14px;
+	color: #dd9922;
+	font-size: 14px;
+	font-family: monospace;
+	text-shadow: 2px 2px 3px #dd9922;
+}
+
+.shellprompt {
+	font-size: 0;
+	display: inline;
+}
+
+.shelluser {
+	font-size: 14px;
+	color: #13477d;
+	text-shadow: 2px 2px 3px #13477d;
+}
+
+.shellnorm {
+	font-size: 14px;
+	color: #666666;
+	text-shadow: 2px 2px 3px #888888;
+}
+
+.shellhost {
+	font-size: 14px;
+	color: #99bb66;
+	text-shadow: 2px 2px 3px #aaee88;
+}
+
+.shelldirs {
+	font-size: 14px;
+	color: #77bb88;
+	text-shadow: 2px 2px 3px #88dd99;
+}
+
+.shellrest {
+	font-size: 14px;
+	color: #cccccc;
+	text-shadow: 2px 2px 3px #ffffff;
+}
+
+.comment {
+	color: #555555;
+	text-shadow: 2px 2px 3px #666666;
+	display: inline;
+}
+
+.blocknote {
+	background-color: #352e2b;
+	margin: 30px 50px;
+	border: 1px solid #aa6666;
+	border-radius: 10px;
+}
+
+.blocknotetext {
+	margin: 14px;
+	color: #ddcccc;
+}
+
+.info {
+	text-align: center;
+	font-size: 80%;
+}
+
+.footer {
+	color: #ddd;
+	font-family:'Roboto', sans-serif;
+	font-size: 65%;
+	margin-bottom: 10px;
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-top: 10px;
+	width: 94%;
+	display: flex;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer p {
+	text-indent: 5px;
+	line-height: 0.9;
+}
+
+.footer a {
+	color: #F9C80E;
+}
+
+.license {
+	flex: 75%;
+	margin-left: 5px;
+}
+
+.license img {
+	float: left;
+}
+
+.server {
+	flex: 25%;
+	text-align: right;
+}
+
+.server img {
+	float: right;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+
+	body {
+		max-width: 568px;
+	}
+
+	.normtext {
+		margin-right: 25px;
+		margin-left: 25px;
+	}
+
+	.content {
+		margin-bottom: 125px;
+	}
+
+	table img {
+		height: 100px;
+	}
+
+	.caption {
+		min-height: 100px;
+	}
+
+	.console {
+		margin: 20px 40px;
+	}
+
+	.consoletext {
+		margin: 10px;
+	}
+
+	.blocknote {
+		margin: 20px 40px;
+	}
+
+	.blocknotetext {
+		margin: 10px;
+	}
+
+	.navbar-pages {
+		flex: 25%;
+		margin-left: 0;
+	}
+
+	.navbar-icons {
+		flex: 75%;
+	}
+
+	.navbar-icons a {
+		margin-top: 10px;
+	}
+
+	.navbar-pages a {
+		display: none;
+	}
+
+	.mmenu {
+		display: inline-block;
+	}
+
+	.mmenu:hover {
+		cursor: pointer;
+	}
+
+	@keyframes fademenu {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+
+	#minput:checked ~ a {
+		display: block;
+		margin-left: 2px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		border-bottom-style: none;
+		border-left-style: solid;
+		animation-name: fademenu;
+		animation-duration: 1s;
+	}
+
+	#minput:checked + .mmenu {
+		border-color: #1D05C4;
+		color: #F9C80E;
+	}
+
+	.footer {
+		display: block;
+	}
+
+	.server {
+		text-align: left;
+	}
+
+	.server img {
+		float: left;
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+	body {
+		max-width: 480px;
+	}
+
+	.page {
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		min-height: 100vh;
+		margin: 0;
+	}
+
+	.tophead {
+		margin-top: 10px;
+	}
+
+	nav {
+		margin-right: 7px;
+		margin-left: 7px;
+	}
+
+	.content {
+		margin-right: 12px;
+		margin-left: 12px;
+		margin-bottom: 125px;
+	}
+
+	table img {
+		height: 75px;
+	}
+
+	.caption {
+		min-height: 150px;
+	}
+
+	.normtext {
+		margin-right: 12px;
+		margin-left: 12px;
+	}
+
+	.console {
+		margin: 10px 20px;
+	}
+
+	.consoletext {
+		margin: 5px;
+	}
+
+	.blocknote {
+		margin: 10px 20px;
+	}
+
+	.blocknotetext {
+		margin: 5px;
+	}
+
+	.navbar-pages {
+		flex: 25%;
+		margin-left: 0;
+	}
+
+	.navbar-icons {
+		flex: 75%;
+	}
+
+	.navbar-icons a {
+		margin-top: 10px;
+	}
+
+	.navbar-pages a {
+		display: none;
+	}
+
+	.mmenu {
+		display: inline-block;
+	}
+
+	.mmenu:hover {
+		cursor: pointer;
+	}
+
+	@keyframes fademenu {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+
+	#minput:checked ~ a {
+		display: block;
+		margin-left: 2px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		border-bottom-style: none;
+		border-left-style: solid;
+		animation-name: fademenu;
+		animation-duration: 1s;
+	}
+
+	#minput:checked + .mmenu {
+		border-color: #1D05C4;
+		color: #F9C80E;
+	}
+
+	.footer {
+		display: block;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.server {
+		text-align: left;
+	}
+
+	.server img {
+		float: left;
+	}
+
+}
